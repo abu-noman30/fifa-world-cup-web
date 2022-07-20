@@ -29,7 +29,7 @@ _____________________*/
   padding-right: 7.9rem;
 
   /* animation */
-  animation-name: image-wraper;
+  /* animation-name: image-wraper; */
   animation-duration: 5s;
   animation-timing-function: linear;
 }
@@ -48,9 +48,8 @@ _____________________*/
 }
 
 .header-container img {
-    
   /* animation */
-  animation-name: header-img;
+  /* animation-name: header-img; */
   animation-duration: 2s;
   animation-timing-function: ease-in;
   animation-fill-mode: both;
@@ -125,11 +124,10 @@ _____________________*/
 }
 
 .fixture-matchBlog-section .btn-viewAll {
-  /* display: flex; */
-  display: none;
+  display: flex;
+  /* display: none; */
   justify-content: center;
   align-items: center;
-  padding-left: 28rem;
 }
 .fixture-matchBlog-section .btn-viewAll a {
   font-weight: 400;
@@ -150,9 +148,9 @@ _____________________*/
 .fixture-menu {
   display: inline-block;
   min-width: 260px;
-  max-height: 280px; 
+  max-height: 280px;
   background-color: #161616;
-  border-radius: 1.0rem;
+  border-radius: 1rem;
   padding: 2.5rem;
 }
 .fixture-menu a {
@@ -162,10 +160,10 @@ _____________________*/
   display: block;
   color: #161616;
   background-color: #f5f1f1;
-  border-radius: 1.0rem;
+  border-radius: 1rem;
   text-align: center;
-  padding: 1.8rem 4.0rem;
-  margin-bottom: 3.0rem;
+  padding: 1.8rem 4rem;
+  margin-bottom: 3rem;
 }
 .fixture-menu a#btn-blog {
   background: #dd0000;
@@ -225,8 +223,8 @@ _____________________*/
   align-items: center;
   gap: 3rem;
   font-weight: 400;
-  font-size: 13px;
-  line-height: 26px;
+  font-size: 1.3rem;
+  line-height: 2.6rem;
   color: rgba(22, 22, 22, 0.7);
   margin-bottom: 1rem;
 }
@@ -283,3 +281,226 @@ _____________________*/
     Meadia Query 
 _________________________ */
 
+/* Small Device */
+
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 45%;
+  }
+  .header-section {
+    width: 100%;
+    padding: 5rem 5rem;
+    margin-bottom: -5.4rem;
+  }
+  .header-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-container .header-title {
+    text-align: center;
+    padding: 5rem 0rem;
+  }
+
+  .header-title h1 {
+    font-weight: 700;
+    font-size: 5rem;
+    /* line-height: 6rem;  */
+    color: #ffffff;
+    margin-bottom: 2rem;
+    transition: font-size 2s ease-in 0.1s;
+  }
+
+  .fixture-matchBlog-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .fixture-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .fixture-menu a {
+    font-weight: 500;
+    font-size: 2.4rem;
+    color: #161616;
+    background-color: white;
+    border: 0.1rem solid #e8e8e8;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 1rem 4rem;
+    margin: 1rem 2rem;
+  }
+
+  .match-blog-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .match-blog-container .blog {
+    border: 0.1rem solid rgba(0, 0, 0, 0.15);
+    border-radius: 1rem;
+  }
+
+  .blog .blog-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 3rem;
+  }
+  .blog .blog-info a {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: #161616;
+    padding: 0.5rem 2rem;
+    border: 0.2rem solid #161616;
+    border-radius: 0.5rem;
+    margin-right: 25rem;
+  }
+  .blog .blog-info h4 {
+    font-weight: 600;
+    font-size: 1.6rem;
+  }
+  .blog .blog-info .viewer-icons {
+    font-size: 1.5rem;
+    line-height: 2.6rem;
+    margin-bottom: 2rem;
+  }
+  .footer-container {
+    color: #fff;
+    text-align: center;
+    padding: 0 10rem;
+  }
+  .footer-container .footer-menu {
+    padding: 1rem 0px;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2rem;
+  }
+} 
+
+/* Mediam Device */
+ @media only screen and (min-width: 768px) and (max-width: 1023px) {
+  html {
+    font-size: 55%;
+  }
+  .header-section {
+    width: 100%;
+    padding: 5rem 5rem;
+    margin-bottom: -0.5rem;
+  }
+
+  .header-container {
+    padding-top: 8rem;
+    padding-bottom: 3rem;
+  }
+
+  .header-container .header-title {
+    padding: 1rem 2rem;
+  }
+
+  .header-title h1 {
+    font-weight: 700;
+    font-size: 6rem;
+    /* line-height: 6rem;   */
+    color: #ffffff;
+    margin-bottom: 2rem;
+    transition: font-size 1s ease-in 0.1s;
+  }
+
+  .fixture-matchBlog-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4rem;
+  }
+  .fixture-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    padding: 0.5rem;
+    align-content: center;
+    align-items: center;
+  }
+
+  .fixture-menu a {
+    font-weight: 500;
+    font-size: 2.4rem;
+    color: #161616;
+    background-color: white;
+    border: 0.1rem solid #e8e8e8;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 2rem 2.6rem;
+  }
+  .fixture-menu #btn-group,
+  .fixture-menu #btn-blog {
+    padding: 2rem 11rem;
+  }
+
+  .match-blog-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .match-blog-container .blog {
+    border: 0.1rem solid rgba(0, 0, 0, 0.15);
+    border-radius: 1rem;
+  }
+
+  .blog .blog-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 3rem;
+  }
+  .blog .blog-info a {
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    color: #161616;
+    padding: 1rem 3rem;
+    border: 0.2rem solid #161616;
+    border-radius: 0.5rem;
+    margin-right: 23rem;
+  }
+  .blog .blog-info h4 {
+    font-weight: 700;
+    font-size: 2rem;
+  }
+  .blog .blog-info .viewer-icons {
+    font-size: 2rem;
+    line-height: 2.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .footer-container {
+    color: #fff;
+    text-align: center;
+    padding: 0 30rem;
+  }
+  .footer-container .footer-menu {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0px;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+} 
+
+
+
+/* Large Device */
+ @media only screen and (min-width: 1024px) {
+  .fixture-matchBlog-section .btn-viewAll {
+    /* display: flex; */
+    display: none;
+  }
+} 
