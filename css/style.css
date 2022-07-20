@@ -68,19 +68,31 @@ _____________________*/
     _________________________________*/
 
 .fixture-matchBlog-section {
-  /* width: 100%;
-    padding: 5rem 14rem;
-    margin-bottom: 1.6rem; */
+  padding-bottom: 6rem;
+}
+
+.fixture-matchBlog-section .btn-viewAll {
+  /* display: flex; */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding-left: 28rem;
+}
+.fixture-matchBlog-section .btn-viewAll a {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  color: white;
+  padding: 1.3rem 2.5rem;
+  background-color: #dd0000;
+  border-radius: 5px;
 }
 .fixture-matchBlog-container {
   width: 100%;
-  padding: 1rem 12.5rem;
+  padding: 1rem 12rem;
   display: flex;
 }
-/* .match-blog{
-    display: ;
-} */
-/* fixture's menu */
 
 .fixture-menu {
   /* width: 20%; */
@@ -103,8 +115,16 @@ _____________________*/
   padding: 18px 40px;
   margin-bottom: 30px;
 }
+/* .fixture-menu a#btn-blog {
+    background: #dd0000;
+    color: white;
+  } */
 
-.fixture-menu a#btn-blog {
+.fixture-menu a#btn-blog:active {
+  background: #dd0000;
+  color: white;
+}
+.fixture-menu a#btn-blog:focus {
   background: #dd0000;
   color: white;
 }
@@ -161,4 +181,50 @@ _____________________*/
   line-height: 26px;
   color: rgba(22, 22, 22, 0.7);
   margin-bottom: 1rem;
+}
+
+/* ____________________
+    Footer
+   _____________________ */
+
+.footer-section {
+  width: 100%;
+  background-color: #161616;
+}
+
+.footer-container {
+  color: #fff;
+  text-align: center;
+  padding: 0 20rem;
+}
+.footer-container h1 {
+  font-weight: 600;
+  font-size: 4rem;
+  line-height: 6rem;
+  padding: 2rem;
+  margin-bottom: 5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer-container .footer-menu {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem 8rem;
+  margin-bottom: 2rem;
+}
+.footer-container .footer-menu a {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #b9b9b9;
+}
+.footer-container .social-icons {
+  padding-bottom: 2rem ;
+}
+.footer-container .social-icons a {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #b9b9b9;
+  margin-left: 2rem ;
+  margin-bottom: 2rem ;
 }
