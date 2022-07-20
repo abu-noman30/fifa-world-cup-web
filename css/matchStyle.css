@@ -28,9 +28,16 @@ html {
   padding-left: 10.6rem;
   padding-right: 7.9rem;
 }
-
 .header-container .header-title {
   padding: 10rem 2rem;
+}
+
+.header-title h1 {
+  font-weight: 700;
+  font-size: 7rem;
+  line-height: 6rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
 }
 .header-title h1 {
   font-weight: 700;
@@ -38,7 +45,21 @@ html {
   line-height: 6rem;
   color: #ffffff;
   margin-bottom: 2rem;
-  transition: font-size 3s linear 0.1s;
+}
+.header-title h1:hover {
+  font-weight: 900;
+  font-size: 6rem;
+  line-height: 6rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  transition: all 0.5s ease-in-out;
+}
+.header-title {
+  font-weight: 700;
+  font-size: 7rem;
+  line-height: 6rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
 }
 .header-title p {
   font-weight: 400;
@@ -56,6 +77,17 @@ html {
   padding: 1.3rem 2.5rem;
   background-color: #dd0000;
   border-radius: 0.5rem;
+}
+.header-title button:hover {
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 3.3rem;
+  text-align: center;
+  color: white;
+  padding: 1.3rem 2.5rem;
+  background-color: #dd0000;
+  border-radius: 0.5rem;
+  transition: all 0.5s ease-in-out;
 }
 .header-title button i {
   padding-left: 0.8rem;
@@ -260,7 +292,6 @@ _________________________ */
     /* line-height: 6rem;  */
     color: #ffffff;
     margin-bottom: 2rem;
-    transition: font-size 2s ease-in 0.1s;
   }
 
   .header-title button {

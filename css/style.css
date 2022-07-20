@@ -29,7 +29,7 @@ _____________________*/
   padding-right: 7.9rem;
 
   /* animation */
-  animation-name: image-wraper;
+  /* animation-name: image-wraper; */
   animation-duration: 5s;
   animation-timing-function: linear;
 }
@@ -50,10 +50,11 @@ _____________________*/
 .header-container img {
   /* animation */
   animation-name: header-img;
-  animation-duration: 2s;
-  animation-timing-function: ease-in;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
   animation-fill-mode: both;
-  animation-delay: 7s;
+  animation-delay: 1.8s;
 }
 
 @keyframes header-img {
@@ -70,10 +71,9 @@ _____________________*/
 
   /* animation */
   animation-name: header-title;
-  animation-duration: 2s;
-  animation-timing-function: linear;
-  animation-fill-mode: both;
-  animation-delay: 6s;
+  animation-iteration-count: 1;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes header-title {
