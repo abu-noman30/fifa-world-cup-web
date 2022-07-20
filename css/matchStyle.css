@@ -7,8 +7,8 @@
   font-family: 'Poppins', sans-serif;
 }
 html {
-  /* font-size: 62.5%; */
-  font-size: 10px;
+  font-size: 62.5%;
+  /* font-size: 10px; */
 }
 /* __________________
       Header section 
@@ -28,10 +28,7 @@ html {
   padding-left: 10.6rem;
   padding-right: 7.9rem;
 }
-/* .header-container img {
-    width: 58rem;
-  
-  } */
+
 .header-container .header-title {
   padding: 10rem 2rem;
 }
@@ -41,6 +38,7 @@ html {
   line-height: 6rem;
   color: #ffffff;
   margin-bottom: 2rem;
+  transition: font-size 3s linear 0.1s;
 }
 .header-title p {
   font-weight: 400;
@@ -49,17 +47,17 @@ html {
   color: #ffffff;
   margin-bottom: 3rem;
 }
-.header-title a {
+.header-title button {
   font-weight: 400;
-  font-size: 20px;
-  line-height: 23px;
+  font-size: 2rem;
+  line-height: 2.3rem;
   text-align: center;
   color: white;
   padding: 1.3rem 2.5rem;
   background-color: #dd0000;
-  border-radius: 5px;
+  border-radius: 0.5rem;
 }
-.header-title a i {
+.header-title button i {
   padding-left: 0.8rem;
 }
 
@@ -72,21 +70,20 @@ html {
 }
 
 .fixture-matchTiming-section .btn-viewAll {
-  /* display: flex; */
-  display: none;
+  display: flex;
+  /* display: none; */
   justify-content: center;
   align-items: center;
-  padding-left: 28rem;
 }
 .fixture-matchTiming-section .btn-viewAll a {
   font-weight: 400;
-  font-size: 20px;
-  line-height: 23px;
+  font-size: 2rem;
+  line-height: 2.3rem;
   text-align: center;
   color: white;
   padding: 1.3rem 2.5rem;
   background-color: #dd0000;
-  border-radius: 5px;
+  border-radius: 0.5rem;
 }
 .fixture-matchTiming-container {
   width: 100%;
@@ -95,35 +92,40 @@ html {
 }
 
 .fixture-menu {
-  /* width: 20%; */
-  display: inline-block;
-  width: 260px;
-  height: 280px;
+  display: flex;
+  flex-basis: auto;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 260px;
+  max-height: 270px;
   background-color: #161616;
-  border-radius: 10px;
-  padding: 25px;
+  border-radius: 1rem;
+  padding-top: 28px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .fixture-menu a {
   /* width: 20%; */
   font-weight: 700;
-  font-size: 14px;
+  font-size: 1.4rem;
   display: block;
   color: #161616;
   background-color: #f5f1f1;
-  border-radius: 10px;
+  border-radius: 1rem;
   text-align: center;
-  padding: 18px 40px;
-  margin-bottom: 30px;
+  padding: 1.4rem 2rem;
+  margin-bottom: 3rem;
+}
+
+.fixture-menu a:hover {
+  background-color: #dd0000;
+  color: white;
 }
 .fixture-menu a#btn-upcomming-match {
   background: #dd0000;
   color: white;
 }
 
-/* .fixture-menu a:active {
-    background: #dd0000;
-    color: white;
-  } */
 .fixture-menu a:focus {
   background: #dd0000;
   color: white;
@@ -133,13 +135,12 @@ html {
 
 .fixture-container {
   display: grid;
-  grid-template-columns: repeat(3, 0.1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
   margin-left: 2rem;
 }
 
 .fixture-container .fixture {
-  /* box-shadow: 0rem 0rem 4rem rgba(0, 0, 0, 0.15); */
   border: 0.1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.5rem;
   display: flex;
@@ -171,6 +172,7 @@ html {
   font-size: 2rem;
   line-height: 3rem;
   color: #161616;
+  margin-bottom: 1rem;
 }
 .fixture .timing p {
   font-weight: 400;
@@ -199,7 +201,7 @@ html {
   line-height: 6rem;
   padding: 2rem;
   margin-bottom: 5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.1);
 }
 .footer-container .footer-menu {
   display: flex;
@@ -223,4 +225,196 @@ html {
   color: #b9b9b9;
   margin-left: 2rem;
   margin-bottom: 2rem;
+}
+
+/* __________________________________ */
+
+/* ______________________
+    Meadia Query 
+_________________________ */
+
+/* Small Device */
+
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 45%;
+  }
+  .header-section {
+    width: 100%;
+    padding: 5rem 5rem;
+    margin-bottom: -5.4rem;
+  }
+  .header-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-container .header-title {
+    text-align: center;
+    padding: 5rem 0rem;
+  }
+
+  .header-title h1 {
+    font-weight: 700;
+    font-size: 5rem;
+    /* line-height: 6rem;  */
+    color: #ffffff;
+    margin-bottom: 2rem;
+    transition: font-size 2s ease-in 0.1s;
+  }
+
+  .header-title button {
+    font-size: 2rem;
+  }
+  .fixture-matchTiming-section .btn-viewAll {
+    /* display: flex; */
+    display: none;
+  }
+  .fixture-matchTiming-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .fixture-menu {
+    display: flex;
+    flex-basis: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .fixture-menu a {
+    font-weight: 500;
+    font-size: 2.4rem;
+    color: #161616;
+    background-color: white;
+    border: 0.1rem solid #e8e8e8;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 2rem 4rem;
+    margin: 1rem 2rem;
+  }
+
+  .fixture-menu #btn-blog {
+    padding: 2rem 7rem;
+  }
+
+  .fixture-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .ixture-container .fixture {
+    border: 0.1rem solid rgba(0, 0, 0, 0.15);
+    border-radius: 1rem;
+  }
+
+  .footer-container {
+    color: #fff;
+    text-align: center;
+    padding: 0 10rem;
+  }
+  .footer-container .footer-menu {
+    padding: 1rem 0px;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+/* Mediam Device */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  html {
+    font-size: 55%;
+  }
+  .header-section {
+    width: 100%;
+    padding: 5rem 5rem;
+    margin-bottom: -0.5rem;
+  }
+
+  .header-container {
+    padding-top: 8rem;
+    padding-bottom: 3rem;
+  }
+
+  .header-container .header-title {
+    padding: 1rem 2rem;
+  }
+
+  .header-title h1 {
+    font-weight: 700;
+    font-size: 6rem;
+    /* line-height: 6rem;   */
+    color: #ffffff;
+    margin-bottom: 2rem;
+    transition: font-size 1s ease-in 0.1s;
+  }
+
+  .fixture-matchTiming-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4rem;
+  }
+  .fixture-menu {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    column-gap: 2rem;
+  }
+
+  .fixture-menu a {
+    font-weight: 500;
+    font-size: 2.4rem;
+    color: #161616;
+    background-color: white;
+    border: 0.1rem solid #e8e8e8;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 2rem 2.6rem;
+  }
+  .fixture-menu #btn-group {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+  .fixture-menu #btn-blog {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+
+  .fixture-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .fixture-container .fixture {
+    border: 0.1rem solid rgba(0, 0, 0, 0.15);
+    border-radius: 1rem;
+  }
+
+  .footer-container {
+    color: #fff;
+    text-align: center;
+    padding: 0 30rem;
+  }
+  .footer-container .footer-menu {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0px;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+}
+
+/* Large Device */
+@media only screen and (min-width: 1024px) {
+  .fixture-matchTiming-section .btn-viewAll {
+    /* display: flex; */
+    display: none;
+  }
 }

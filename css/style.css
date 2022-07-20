@@ -29,7 +29,7 @@ _____________________*/
   padding-right: 7.9rem;
 
   /* animation */
-  /* animation-name: image-wraper; */
+  animation-name: image-wraper;
   animation-duration: 5s;
   animation-timing-function: linear;
 }
@@ -49,7 +49,7 @@ _____________________*/
 
 .header-container img {
   /* animation */
-  /* animation-name: header-img; */
+  animation-name: header-img;
   animation-duration: 2s;
   animation-timing-function: ease-in;
   animation-fill-mode: both;
@@ -101,17 +101,18 @@ _____________________*/
   color: #ffffff;
   margin-bottom: 3rem;
 }
-.header-title a {
+
+.header-title button {
   font-weight: 400;
-  font-size: 20px;
-  line-height: 23px;
+  font-size: 2rem;
+  line-height: 2.3rem;
   text-align: center;
   color: white;
   padding: 1.3rem 2.5rem;
   background-color: #dd0000;
-  border-radius: 5px;
+  border-radius: 0.5rem;
 }
-.header-title a i {
+.header-title button i {
   padding-left: 0.8rem;
 }
 
@@ -131,13 +132,13 @@ _____________________*/
 }
 .fixture-matchBlog-section .btn-viewAll a {
   font-weight: 400;
-  font-size: 20px;
-  line-height: 23px;
+  font-size: 2rem;
+  line-height: 2.3rem;
   text-align: center;
   color: white;
   padding: 1.3rem 2.5rem;
   background-color: #dd0000;
-  border-radius: 5px;
+  border-radius: 0.5rem;
 }
 .fixture-matchBlog-container {
   width: 100%;
@@ -146,12 +147,17 @@ _____________________*/
 }
 
 .fixture-menu {
-  display: inline-block;
+  display: flex;
+  flex-basis: auto;
+  flex-direction: column;
+  justify-content: center;
   min-width: 260px;
-  max-height: 280px;
+  max-height: 270px;
   background-color: #161616;
   border-radius: 1rem;
-  padding: 2.5rem;
+  padding-top: 28px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .fixture-menu a {
   /* width: 20%; */
@@ -162,9 +168,14 @@ _____________________*/
   background-color: #f5f1f1;
   border-radius: 1rem;
   text-align: center;
-  padding: 1.8rem 4rem;
+  padding: 1.4rem 2rem;
   margin-bottom: 3rem;
 }
+.fixture-menu a:hover {
+  background-color: #dd0000;
+  color: white;
+}
+
 .fixture-menu a#btn-blog {
   background: #dd0000;
   color: white;
@@ -249,7 +260,7 @@ _____________________*/
   line-height: 6rem;
   padding: 2rem;
   margin-bottom: 5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.1);
 }
 .footer-container .footer-menu {
   display: flex;
@@ -311,6 +322,14 @@ _________________________ */
     transition: font-size 2s ease-in 0.1s;
   }
 
+  .header-title button {
+    font-size: 2rem;
+    line-height: 2.3rem;
+  }
+  .fixture-matchBlog-section .btn-viewAll {
+    /* display: flex; */
+    display: none;
+  }
   .fixture-matchBlog-container {
     display: flex;
     flex-direction: column;
@@ -318,6 +337,7 @@ _________________________ */
   }
   .fixture-menu {
     display: flex;
+    flex-basis: auto;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -334,8 +354,12 @@ _________________________ */
     border: 0.1rem solid #e8e8e8;
     border-radius: 1rem;
     text-align: center;
-    padding: 1rem 4rem;
+    padding: 2rem 4rem;
     margin: 1rem 2rem;
+  }
+
+  .fixture-menu #btn-blog {
+    padding: 2rem 7rem;
   }
 
   .match-blog-container {
@@ -350,7 +374,8 @@ _________________________ */
   .blog .blog-info {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    align-items: flex-start;
+    gap: 2rem;
     padding: 0 3rem;
   }
   .blog .blog-info a {
@@ -361,7 +386,6 @@ _________________________ */
     padding: 0.5rem 2rem;
     border: 0.2rem solid #161616;
     border-radius: 0.5rem;
-    margin-right: 25rem;
   }
   .blog .blog-info h4 {
     font-weight: 600;
@@ -384,10 +408,10 @@ _________________________ */
     flex-direction: column;
     gap: 2rem;
   }
-} 
+}
 
 /* Mediam Device */
- @media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
   html {
     font-size: 55%;
   }
@@ -421,13 +445,12 @@ _________________________ */
     margin-bottom: 4rem;
   }
   .fixture-menu {
+    background-color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: white;
-    padding: 0.5rem;
-    align-content: center;
-    align-items: center;
+    text-align: center;
+    column-gap: 2rem;
   }
 
   .fixture-menu a {
@@ -440,9 +463,13 @@ _________________________ */
     text-align: center;
     padding: 2rem 2.6rem;
   }
-  .fixture-menu #btn-group,
+  .fixture-menu #btn-group {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
   .fixture-menu #btn-blog {
-    padding: 2rem 11rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
   }
 
   .match-blog-container {
@@ -493,14 +520,12 @@ _________________________ */
     flex-wrap: wrap;
     gap: 2rem;
   }
-} 
-
-
+}
 
 /* Large Device */
- @media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
   .fixture-matchBlog-section .btn-viewAll {
     /* display: flex; */
     display: none;
   }
-} 
+}
